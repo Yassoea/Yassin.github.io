@@ -3,11 +3,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     anchors.forEach(function(anchor) {
         anchor.addEventListener('click', function(event) {
-            event.preventDefault();
-            var targetId = this.getAttribute('href').substring(1);
-            var targetElement = document.getElementById(targetId);
-            targetElement.scrollIntoView({ behavior: 'smooth' });
-            document.body.classList.remove('menu-active');
+            // Check if the anchor link points to an external page
+            if (this.getAttribute('href').startsWith('#')) {
+                // Prevent the default anchor behavior for internal links
+                event.preventDefault();
+                var targetId = this.getAttribute('href').substring(1);
+                var targetElement = document.getElementById(targetId);
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+                document.body.classList.remove('menu-active');
+            }
+            // For external links, let the default behavior occur (i.e., navigating to another page)
         });
     });
 
@@ -27,18 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
             $body.classList.remove('menu-active'); 
         });
     }
-
-    var scrollLink = document.querySelectorAll('a[href^="#"]');
-    scrollLink.forEach(function(link) {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            var targetId = this.getAttribute('href').substring(1);
-            var targetElement = document.getElementById(targetId);
-            targetElement.scrollIntoView({ behavior: 'smooth' });
-        });
-    });
-
-    
     adjustMenuTriggerPosition();
 
     window.addEventListener('scroll', function() {

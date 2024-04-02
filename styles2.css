@@ -1,11 +1,248 @@
+:root {
+  --card-height: 300px;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+
 * {
-    margin: 0;
-    padding: 0;
-  }
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+display: none;
+}
+
+body {
+  width: 90vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  background: #191c29;
+}
+
+.card {
+  width: var(--card-width);
+  height: var(--card-height);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 36px;
+  perspective: 2500px;
+  margin: 0 80px;
+}
+.home-link {
+  margin-left: 80px; 
+  margin-top: 50px; 
+  display: flex;
+  align-items: center; 
+}
+.home-link img {
+  width: 45px; 
+  height: auto;
+}
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card{
+  margin-top: 70px;
   
+}
+.card[id],
+.paragraph[id] {
+  scroll-margin-top: 10vh; 
+}
+
+
+.card[id]:target,
+.paragraph[id]:target {
+  display: block;
+  position: relative;
+  top: 50vh;
+  transform: translateY(-50%);
+}
+.wrapper {
+  transition: all 0.5s;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.card:hover .wrapper {
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.wrapper::before,
+.wrapper::after {
+  content: "";
+  opacity: 0;
+  width: 100%;
+  height: calc(var(--card-height) * 0.27); 
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+}
+
+.wrapper::before {
+  top: 0;
+  height: 100%;
+  background-image: linear-gradient(
+    to top,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+.wrapper::after {
+  bottom: 0;
+  opacity: 1;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+
+.card:hover .wrapper::before,
+.wrapper::after {
+  opacity: 1;
+}
+
+.card:hover .wrapper::after {
+  height: calc(var(--card-height) * 0.4); 
+}
+
+.title {
+  width: 100%;
+  transition: transform 0.5s;
+}
+
+.card:hover .title {
+  transform: translate3d(0%, -50px, 100px);
+}
+
+.character {
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: -1;
+}
+
+.card:hover .character {
+  opacity: 1;
+  transform: translate3d(0%, -30%, 100px);
+}
+.paragraph h1 {
+  font-size: 23px;
+  margin-bottom: 10px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.paragraph p {
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+.paragraph {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  width: 60%;
+  align-self: flex-end;
+  margin-right: 20px;
+  float: right;
+  border-radius: 14px;
+  position: relative; 
+  bottom: 250px; 
+}
+.menu-trigger {
+  position: absolute;
+  border-radius: 8px;
+  right: 20px;
+  width: 50px; 
+  height: auto; 
+  margin-right: 50px;
+  cursor: pointer;
+  z-index: 3; 
+}
+
+.menu-active .menu-trigger {
+  z-index: 1; 
+}
+
+.side-panel {
+  position: fixed;
+  top: 0;
+  right: -300px; 
+  width: 300px;
+  height: 100%;
+  background: linear-gradient(135deg, #831010, #db0000); 
+  transition: right 0.3s ease;
+  z-index: 1;
+}
+
+.side-panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 50px 0 0 0;
+}
+
+.side-panel ul li {
+  padding: 10px;
+}
+
+.side-panel ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+h5{
+  text-align: center;
+  color: white;
+  margin-left: 10%;
+  font-size: 50px;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+.side-panel ul li a:hover {
+  background-color: #000000;
+}
+
+.menu-active .side-panel {
+  right: 0; 
+}
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #db0000 , #831010);
+  border: none;
+  cursor: pointer;
+  z-index: 2; 
+}
+
+.close-button:hover {
+  background-color: #f0f0f0;
+}
