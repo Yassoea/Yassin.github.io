@@ -3,16 +3,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     anchors.forEach(function(anchor) {
         anchor.addEventListener('click', function(event) {
-            // Check if the anchor link points to an external page
+           
             if (this.getAttribute('href').startsWith('#')) {
-                // Prevent the default anchor behavior for internal links
+               
                 event.preventDefault();
                 var targetId = this.getAttribute('href').substring(1);
                 var targetElement = document.getElementById(targetId);
                 targetElement.scrollIntoView({ behavior: 'smooth' });
                 document.body.classList.remove('menu-active');
             }
-            // For external links, let the default behavior occur (i.e., navigating to another page)
+            
         });
     });
 
