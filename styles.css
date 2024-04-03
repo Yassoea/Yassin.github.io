@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: auto;
-  height: 500vh;
+  height: 450vh;
   background: linear-gradient(135deg, #831010, #db0000); 
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
@@ -268,10 +268,8 @@ h1{
   display: none;
 }
 
-
 .glass2 {
   width: 50%;
-
   margin-top: 150px;
 }
 .glass2 p{
@@ -431,8 +429,274 @@ footer{
       padding: 8px;
       margin: 4px;
   }
+  .faf-logo{
+    margin-left: 5%;
+    width: 40%;
+    
+    margin-top: 35%;
+   }
 }
 .footerContainer,.footerBottom{
   margin-top: 80px;
   
 }
+@media (max-width: 1160px) {
+  .container2 {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+  }
+  .faf-logo{
+    width: 50%;
+    margin-top: 1%;
+    margin-left: 25%;
+  }
+  .menu-trigger{
+    margin-right: 5%;
+    
+  }
+  .footerContainer{
+    width: 80%;
+    height: auto;
+  }
+  .footerContainer li{
+   margin-left: 55px  ;
+  }
+  .socialIcons{
+    margin-left: 10%;
+  }
+  .glass1{
+    width: 70%;
+    margin-left: 30%;
+    font-size: 35px;
+  }
+}
+@media (max-width: 1246px) {
+  }
+  .faf-logo{
+    width: 40%;
+    margin-top: 0%;
+    margin-left: 1%;
+  }
+  .menu-trigger{
+    margin-right: 5%;
+    
+  }
+  .footerContainer{
+    width: 80%;
+    height: auto;
+  }
+  .footerContainer li{
+   margin-left: 55px  ;
+  }
+  .socialIcons{
+    margin-left: 10%;
+  }
+  .glass1{
+    width: 35%;
+    margin-top: 5%;
+    margin-left: 1%;
+    font-size: 15px;
+  }
+  .glass2{
+    margin-top: 5%;
+    margin-bottom: 15%;
+  }
+  .intro-image{
+    margin-top: 5%;
+  }
+
+@media (max-width: 1001px) {
+ .intro-image{
+  width: 13%;
+  margin-left: 0%;
+  margin-right: 15%;
+  margin-top: 1;
+  
+ }
+ .glass2 p{
+  font-size: 18px;
+
+ }
+ .glass2{
+  margin-top: 15%;
+  width: 80%;
+ }
+ .glass1{
+  margin-left: 10%;
+  width: 45%;
+ }
+ .faf-logo{
+  margin-left: 3%;
+  width: 40%;
+  
+  margin-top: 2%;
+ }
+}
+@media (max-width: 910px) {
+  .intro-image{
+   width: 13%;
+   margin-left: 0%;
+   margin-right: 15%;
+   margin-top: 1;
+  }
+  #glass3 p{
+    font-size: 25px;
+  }
+  .glass2 p{
+   font-size: 18px;
+ 
+  }
+  .glass2{
+   margin-top: 15%;
+   width: 80%;
+  }
+  .glass1{
+   margin-left: 18%;
+   width: 55%;
+  }
+  .glass1 p{
+    font-size: 15px;
+  }
+  .faf-logo{
+    margin-left: 5%;
+    width: 40%;
+    
+    margin-top: 6%;
+   }
+ }
+ @media (max-width:650px){
+  .faf-logo{
+    margin-left: 5%;
+    width: 50%;
+    margin-top: 6%;
+   }
+ }
+ @media (max-width:500px){
+
+  .faf-logo{
+    margin-left: 14%;
+    width: 70%;
+    margin-top: 6%;
+   }
+   .glass1{
+    width: 70%;
+    margin-left: 30%;
+    margin-top: -45%;
+    z-index: 0  ;
+   }
+   .glass2 p{
+    font-size: 15px;
+   }
+   .intro-image{
+    width: 23%;
+    margin-right: 5%;
+    margin-top: -2px;
+   }
+   .glass2{
+    margin-left: 5%;
+    margin-top: 30%;
+   }
+   #glass3 p{
+    font-size: 20px;
+   }  
+ }
+ @media (max-width:370px){
+  .faf-logo{
+    margin-left: 8%;
+    width: 80%;
+    margin-top: 6%;
+   }
+   .glass1{
+    width: 70%;
+    margin-left: 30%;
+   }
+   .glass2 p{
+    font-size: 11px;
+   }
+   .intro-image{
+    width: 45%;
+    margin-right: 24%;
+    margin-top: 0%;
+   }
+   .glass2{
+    margin-left: 5%;
+    margin-top: 65%;
+   }
+   #glass3 p{
+    font-size: 15px;
+   }
+   #glass3{
+    margin-top: 65%;
+   }
+   h1{
+    font-size: 70px;
+   }
+ }
+ @media (max-width:365px){
+  .faf-logo{
+    margin-left: 8%;
+    width: 80%;
+    margin-top: 6%;
+   }
+   .glass1{
+    width: 70%;
+    margin-top: 15%;
+    margin-left: 30%;
+   }
+   .glass2 p{
+    font-size: 11px;
+   }
+   .intro-image{
+    width: 45%;
+    margin-right: 24%;
+    margin-top: 0%;
+   }
+   .glass2{
+    margin-left: 5%;
+    margin-top: 65%;
+   }
+   #glass3 p{
+    font-size: 15px;
+   }
+   #glass3{
+    margin-top: 65%;
+   }
+   h1{
+    font-size: 70px;
+   }
+ }
+ @media (max-width:1024px){
+  .faf-logo{
+    margin-left: 8%;
+    width: 80%;
+    margin-top: 6%;
+   }
+   .glass1{
+    width: 70%;
+    margin-top: 15%;
+    margin-left: 30%;
+   }
+   .glass2 p{
+    font-size: 11px;
+   }
+   .intro-image{
+    width: 45%;
+    margin-right: 24%;
+    margin-top: 0%;
+   }
+   .glass2{
+    margin-left: 5%;
+    margin-top: 65%;
+   }
+   #glass3 p{
+    font-size: 15px;
+   }
+   #glass3{
+    margin-top: 65%;
+   }
+   h1{
+    font-size: 70px;
+   }
+ } 

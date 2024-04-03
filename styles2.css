@@ -8,6 +8,8 @@
 }
 html {
   scroll-behavior: smooth;
+  height: 1050vh;
+  ;
 }
 
 body::-webkit-scrollbar {
@@ -16,8 +18,9 @@ display: none;
 
 body {
   width: 90vw;
-  height: 100vh;
+  height: 1050vh;
   margin: 0;
+  padding: 0;
   display: flex;
   justify-content: flex-start; 
   align-items: flex-start; 
@@ -168,7 +171,7 @@ body {
   float: right;
   border-radius: 14px;
   position: relative; 
-  bottom: 250px; 
+  bottom: 280px; 
 }
 .menu-trigger {
   position: absolute;
@@ -246,3 +249,143 @@ h5{
 .close-button:hover {
   background-color: #f0f0f0;
 }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+@media screen and (max-width: 918px) {
+  .container {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .card {
+      margin-bottom: 20px;
+      align-self: center; 
+  }
+
+  .paragraph {
+      width: calc(100% - var(--card-width) - 160px); 
+      margin-right: auto;
+      margin-left: 180px;
+      margin-top: 300px; 
+      text-align: center;
+      margin-bottom: 20px; 
+  }
+  .menu-trigger{
+    margin-right: 0px;
+    margin-top: 30px;
+    width: 30px;
+    height: auto;
+    position: absolute;
+  }
+    .home-link img{
+      width: 30px;
+      height: auto;
+      display: inline;
+      text-align: center;
+    }
+    
+  }
+  .menu-trigger img {
+    width: 45px; 
+    height: auto; 
+    
+}
+  h5{
+    font-size: 35px;
+  }
+  html{
+    width: 80%;
+  }
+  @media screen and (max-width: 800px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+  
+    .card {
+        margin-bottom: 20px;
+        align-self: center; 
+    }
+  
+    .paragraph {
+        width: calc(100% - var(--card-width) - 0px); 
+        margin-right: auto;
+        margin-left: 100px;
+        margin-top: 300px; 
+        text-align: center;
+        margin-bottom: 20px; 
+    }
+    .menu-trigger{
+      margin-right: 0px;
+      margin-top: 30px;
+      width: 30px;
+      height: auto;
+      position: absolute;
+    }
+      .home-link img{
+        width: 30px;
+        height: auto;
+        display: inline;
+        text-align: center;
+      }
+      
+    }
+    .menu-trigger img {
+      width: 45px; 
+      height: auto; 
+      
+  }
+    h5{
+      font-size: 35px;
+    }
+    html{
+      width: 80%;
+    }
+    @media screen and (max-width: 590px) {
+      .container {
+          display: flex;
+          flex-direction: column;
+      }
+    
+      .card {
+          margin-bottom: 20px;
+          align-self: center; 
+      }
+    
+      .paragraph {
+          width: calc(100% - var(--card-width) 8px); 
+          margin-right: auto;
+          margin-left: 30px;
+          margin-top: 300px; 
+          text-align: center;
+          margin-bottom: 20px; 
+      }
+      .menu-trigger{
+        margin-right: 0px;
+        margin-top: 30px;
+        width: 30px;
+        height: auto;
+        position: absolute;
+      }
+        .home-link img{
+          width: 30px;
+          height: auto;
+          display: inline;
+          text-align: center;
+        }
+        
+      }
+      .menu-trigger img {
+        width: 45px;
+        height: auto; 
+        
+    }
+      h5{
+        font-size: 35px;
+      }
+      html{
+        width: 80%;
+      }    
